@@ -28,7 +28,7 @@ import SignUpWindow from "components/SignUpWindow/SignUpWindow";
 
 
 
-const Phonebook = () => {
+const App = () => {
   const loginStatus = useSelector(state => state.isLogin);
   const currentUserName = useSelector(state => state.currentUser.user);
 
@@ -83,4 +83,4 @@ const Phonebook = () => {
 
 
 
-export default Phonebook;
+export default App;
