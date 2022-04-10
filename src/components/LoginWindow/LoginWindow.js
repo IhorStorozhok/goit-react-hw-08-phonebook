@@ -4,7 +4,7 @@ import st from "./LoginWindow.module.css";
 import s from "../ContactInput/ContactInput.module.css"
 import { useGetUserMutation } from "redux/authApi";
 import { useState,useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { isLoginSwitcher,loginUser } from "redux/slices/authSlice";
 
 const LoginWindow = () => {

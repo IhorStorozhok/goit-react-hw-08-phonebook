@@ -6,8 +6,7 @@ import { PersistGate } from 'redux-persist/es/integration/react';
 import { store,persistor } from './redux/store';
 import {
   BrowserRouter,
-  Routes,
-  Route,
+ 
 } from "react-router-dom";
 import './index.css';
 import Phonebook from './App'

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { combineReducers } from "@reduxjs/toolkit";
+
 const authSlice = createSlice({name:`auth`,
     initialState: {
         user: { name: null, email: null },

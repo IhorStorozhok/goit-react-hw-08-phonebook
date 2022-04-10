@@ -10,7 +10,6 @@ import Filter from "components/Filter/Filter";
 
 const ContactList = ({}) => {
 
-  const isLogin = useSelector((state)=>{return state.isLogin})
   const [deleteContact, status] = useDeleteContactMutation()
   const { data, isSuccess } = useGetContactsQuery();
   const filterInputValue = useSelector((state) => { return state.filter });

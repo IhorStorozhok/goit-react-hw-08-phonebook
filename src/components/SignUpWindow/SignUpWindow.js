@@ -3,7 +3,6 @@ import st from "./SignUpWindow.module.css";
 import s from "../ContactInput/ContactInput.module.css"
 import { useAddUserMutation } from "redux/authApi";
 import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 
@@ -14,8 +13,7 @@ const SignUpWindow = () => {
   const [email, setUserEmail] = useState('');
   const [password, setUserPassword] = useState('');
   const [confrimPassword, setConfrimPassword] = useState('');
-  const [userAdd,data] = useAddUserMutation();
-  const state = useSelector((state) => { return state })
+  const [userAdd] = useAddUserMutation();
   let navigate = useNavigate();
 
   
