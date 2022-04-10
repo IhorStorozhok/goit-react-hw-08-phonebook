@@ -1,0 +1,43 @@
+.container {
+    width: 398px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+
+}
+
+.inputButton {
+    width: 136px;
+    height: 36px;
+    border-radius: 6px;
+    border: none;
+    margin-left: 42px;
+    margin-top: 12px;
+    margin-bottom: 23px;
+    background-color: gray;
+    color: white;
+    background-color: rgba(191, 252, 252, 0.2);
+    cursor: pointer;
+}
+
+.form {
+    background-color: rgba(191, 252, 252, 0.1);
+    border-radius: 12px;
+    width: 412px;
+    height: 524px;
+
+}
+
+.formTitle {
+    padding: 12px;
+    text-align: center;
+}
+
+.forget {
+    font-size: 10px;
+    display: block;
+    margin-top: 16px;
+    padding: 4px;
+    cursor: pointer;
+}

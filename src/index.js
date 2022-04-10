@@ -1,16 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from "react-redux"
+import { Provider } from "react-redux"
+import { PersistGate } from 'redux-persist/es/integration/react';
 
-import { store } from './redux/store';
+import { store,persistor } from './redux/store';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import './index.css';
 import Phonebook from './App'
 
 
-ReactDOM.render(
-  <React.StrictMode><Provider store={store}>
-    <Phonebook /></Provider>
-  </React.StrictMode>,
+
+ReactDOM.render(<BrowserRouter>
+  <React.StrictMode>
+    <PersistGate loading={null} persistor={persistor} >
+    <Provider store={store}>
+      <Phonebook />
+      </Provider>
+      </PersistGate>
+  </React.StrictMode></BrowserRouter>,
   document.getElementById('root')
 );
 

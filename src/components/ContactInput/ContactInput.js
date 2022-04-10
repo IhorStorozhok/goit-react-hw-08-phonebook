@@ -2,15 +2,20 @@ import React, { useState } from "react";
 import s from "../ContactInput/ContactInput.module.css";
 
 import PropTypes from "prop-types";
-import {useAddContactMutation } from "redux/contacsApi";
+import { useAddContactMutation, useGetContactsMutation } from "redux/contacsApi";
+import { useGetContactsQuery } from "redux/contacsApi";
 
 
 
-const ContactInput = ({ currentContacts }) => {
+
+
+const ContactInput = () => {
   
   
 
   const [contactAdd] = useAddContactMutation();
+    const {data, isSuccess,refetch } = useGetContactsQuery();
+     function getAgain() {  refetch()  } 
  
 
   const [name, setName] = useState("");
@@ -28,11 +33,13 @@ const ContactInput = ({ currentContacts }) => {
 
   const handleSaveContact = (evt) => {
     evt.preventDefault();
-    currentContacts.map((cont) => { return cont.name }).includes(name) ? alert(`contact ${name} has already in your contacts`) :
+    
       
         contactAdd({
           name: name,
-          number: number });
+          number: number
+        });
+    getAgain()
     setName("");
     setNumber("");
       

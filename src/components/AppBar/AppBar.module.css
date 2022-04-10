@@ -1,0 +1,19 @@
+.list{display:flex;
+
+}
+.listElement{width: 90px;
+padding: 8px;
+margin-top: 6px;
+cursor: pointer;
+text-align: center;
+color: #fff;
+border-radius: 5px;
+}
+
+.list>*:second-child{
+   margin-left: auto;
+}
+
+.listElement:hover{
+    transform: scale(1.1);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);}

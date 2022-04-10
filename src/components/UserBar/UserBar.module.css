@@ -1,0 +1,9 @@
+.elementsBox{display: flex;} 
+.button {padding: 8px;
+margin-top: 6px;
+margin-bottom: 0px;
+min-width: 106px;
+height: 21px;
+text-align: center;
+}
+.button:hover:not(:first-child){transform: scale(1.1);cursor: pointer;}
